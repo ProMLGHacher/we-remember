@@ -41,22 +41,84 @@
             max-width: 1920px;
             margin-inline: auto;
         }
+
+
+        @media (max-width: 960px) {
+            .imgmain {
+                width: 100% !important;
+            }
+
+            .grid {
+                grid-template-columns: 1fr 172px 1fr;
+                gap: 40px;
+                grid-template-areas:
+                    "one one one"
+                    "two two two"
+                    "three three three"
+                    "four four four"
+                    "five five five";
+            }
+
+            .asprtio {
+                aspect-ratio: 4/3;
+            }
+
+            .imgtext {
+                font-size: 30px !important;
+            }
+
+            .textwdth {
+                width: 70% !important;
+            }
+
+            .noimage {
+                display: none;
+            }
+
+            .noimagetext {
+                margin-block: 50px;
+            }
+
+            .gridcol {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            .timer {
+                font-size: 100px !important;
+            }
+
+            .gridcol2 {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .textsize {
+                font-size: 34px !important;
+            }
+
+            .textcenter {
+                text-align: center;
+            }
+
+            .justcenter {
+                justify-content: center !important;
+            }
+        }
     </style>
 </head>
 
 <body style="background-image: url('/a9edaf2dd7aed61240d7834b8a33c652.jpg');">
     <header style="background-color: black; color: white; padding-block: 50px;">
-
         <div style="display: flex; justify-content: space-between; align-items: center;" class="container">
             <h1 style="font-size: 28px;">МЫ ПОМНИМ</h1>
             <a style="font-weight: 700; font-size: 18px; color: white; text-decoration: none;" href="">история</a>
         </div>
     </header>
     <main style="display: flex; flex-direction: column;">
-        <img style="width: 80%; margin-block: 120px;" class="container" src="/special.png" alt="">
+        <img style="width: 80%; margin-block: 120px;" class="container imgmain" src="/special.png" alt="">
         <marquee style="color: #747474; font-size: 72px; margin-bottom: 70px;" direction="right">БОЕВАЯ ПОДГОТОВКА
+            БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА
             БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ
-            ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ
             ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ
             ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ
             ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ ПОДГОТОВКА БОЕВАЯ
@@ -89,10 +151,10 @@
                 <p style="margin-bottom: 36px;">Привлекалось: около 10 000 военнослужащих, более 140 кораблей и судов
                     обеспечения, более 60
                     летательных аппаратов и около 1000 единиц техники</p>
-                <img src="/image 26.png" alt="">
+                <img src="/image 26.png" class="asprtio" alt="">
             </div>
             <div style="grid-area: three;">
-                <img style="margin-bottom: 27px;" src="/image 42.png" alt="">
+                <img style="margin-bottom: 27px;" class="asprtio" src="/image 42.png" alt="">
                 <p>Путин отметил, что Россия будет добиваться полной демилитаризации и денацификации Украины</p>
             </div>
             <p style="grid-area: four; margin-bottom: 110px;">
@@ -110,13 +172,13 @@
             <div style="grid-area: five;">
                 <p>Итоговым мероприятием боевой подготовки стало стратегическое командно-штабное учение «Восток-2022»
                 </p>
-                <img style="margin-top: 46px; margin-bottom: 30px;" src="/image 42.png" alt="">
+                <img class="asprtio" style="margin-top: 46px; margin-bottom: 30px;" src="/image 42.png" alt="">
                 <p>Свыше 51 000 военнослужащих из 15 государств, более 60 кораблей и судов обеспечения, 150 летательных
                     аппаратов и свыше 5 000 единиц техники</p>
             </div>
         </div>
         <p style="font-size: 90px; display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between;"
-            class="container">
+            class="container imgtext">
             <span>24&nbsp;</span> <span>февраля&nbsp;</span> <img style="width: fit-content;" src="/image 29.png"
                 alt=""> &nbsp; <span>2022&nbsp;</span> <span>года&nbsp;</span> <span>президент&nbsp;</span>
             <span>Росиии&nbsp;</span> <span>Владимир&nbsp;</span>
@@ -126,7 +188,8 @@
             <span>операции&nbsp;</span>
         </p>
         <div class="container">
-            <p style="width: 40%; font-size: 14px; margin-block: 54px;">Цель операции — защита людей, которые
+            <p class="textwdth" style="width: 40%; font-size: 14px; margin-block: 54px;">Цель операции — защита людей,
+                которые
                 «подвергаются издевательствам, геноциду со стороны киевского режима»,
                 сказал Путин. Он призвал украинских военных в Донбассе сложить оружие. «Все военнослужащие украинской
                 армии,
@@ -138,29 +201,30 @@
         <p style="text-align: end; font-size: 4vw; text-transform: uppercase; margin-block: 58px;">все цели будут
             достигнуты, а задач</p>
         <hr color="#747474">
-        <p
+        <p class="noimagetext"
             style="transform: translateX(-4px); font-size: 4vw; text-transform: uppercase; display: flex; align-items: center; justify-content: space-between;">
             вили контроль над Авдеевкой
-            <img style="width: fit-content;" src="/image 32.png" alt="">
+            <img class="noimage" style="width: fit-content;" src="/image 32.png" alt="">
         </p>
         <hr color="#747474">
         <p
             style="text-align: end; font-size: 4vw; text-transform: uppercase; margin-block: 58px; overflow: hidden; transform: translateX(1.5vw);">
             Освобождение ЛНР, Мариуполя и Херсона Б</p>
         <hr color="#747474">
-        <p
+        <p class="noimagetext"
             style="transform: translateX(-1vw); font-size: 4vw; text-transform: uppercase; display: flex; align-items: center; justify-content: space-between;">
-            селения от геноцида и террора <img style="width: fit-content;" src="/image 33.png" alt=""></p>
+            селения от геноцида и террора <img class="noimage" style="width: fit-content;" src="/image 33.png" alt="">
+        </p>
         <hr color="#747474">
         <div style="display: grid; grid-template-columns: 400px 400px; justify-content: space-between; margin-top: 50px;"
-            class="container">
+            class="container gridcol">
             <p>24 февраля в 05:52 по московскому времени Владимир Путин выступил с обращением к россиянам и объявил о
                 начале специальной военной операции. Президент объяснил, что принял такое решение ради людей Донбасса,
                 которые подвергались «геноциду со стороны киевского режима».</p>
             <p>При этом президент подчеркнул, что страна не побоится ответить западным партнерам Украины, если те
                 помешают достижению целей СВО</p>
         </div>
-        <p style="margin-block: 160px; text-align: center; font-size: 250px;" class="container">05:52:23</p>
+        <p style="margin-block: 160px; text-align: center; font-size: 250px;" class="container timer" >05:52:23</p>
         <div class="container" style="display: flex; justify-content: flex-end;">
             <p style="text-align: end; width: 400px;">Путин обратился к украинским военным с призывом сложить оружие и
                 «идти домой». Те, кто это сделают, смогут
@@ -205,15 +269,15 @@
                 хронология событий хронология событий хронология событий хронология событий хронология событий
                 хронология событий хронология событий хронология событий хронология событий хронология событий
                 хронология событий хронология событий хронология событий хронология событий</marquee>
-            <div class="container"
+            <div class="container gridcol"
                 style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 140px;">
                 <p style="text-align: center; font-size: 40px;">24 февраля 2022 г.</p>
                 <p style="text-align: center; font-size: 40px;">07:00</p>
                 <p style="font-size: 16px; color: #C9C4C4;">
-                    &emsp;&emsp;Около 07:00 по Москве в украинских СМИ появились первые сообщения о взрывах в некоторых
+                    &emsp;&emsp;Около 07:00 по Москве в украинских СМИ появились первые сообщения о взрывах в некоторых
                     городах
-                    страны — Одессе, Бердянске, Краматорске и Харькове.
-                    <br>&emsp;&emsp;В Министерстве обороны РФ выступили с официальным заявлением, в котором подчеркнули,
+                    страны — Одессе, Бердянске, Краматорске и Харькове.
+                    <br>&emsp;&emsp;В Министерстве обороны РФ выступили c официальным заявлением, в котором подчеркнули,
                     что Вооруженные
                     силы страны не наносят ударов ракетами, авиацией или артиллерией по городам Украины и их мирным
                     жителям.
@@ -230,7 +294,7 @@
                 </p>
             </div>
             <img style="margin-block: 260px 140px;" src="/Line 12.svg" alt="">
-            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
+            <div class="container gridcol" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
                 <p style="text-align: center; font-size: 40px;">25 февраля 2022 г.</p>
                 <p style="text-align: center; font-size: 40px;">12:00</p>
                 <p style="font-size: 16px; color: #C9C4C4;">
@@ -242,7 +306,7 @@
             </div>
             <div
                 style="color: black; margin-block: 170px 120px; padding-block: 200px; background-size: 100% 100%;  background-repeat: no-repeat; background-image: url('/Group\ 95.png');">
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;" class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;" class="container gridcol">
                     <p style="text-align: center; font-size: 40px;">26 февраля 2022 г.</p>
                     <p style="text-align: center; font-size: 40px;">8:35</p>
                     <p style="font-size: 16px;">
@@ -258,7 +322,7 @@
                     </p>
                 </div>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 94px;">
+            <div class="gridcol container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 94px;">
                 <p style="text-align: center; font-size: 40px;">27 февраля 2022 г.</p>
                 <p style="text-align: center; font-size: 40px;">16:30</p>
                 <p style="font-size: 16px; color: #C9C4C4;">
@@ -269,9 +333,10 @@
                 </p>
             </div>
         </div>
-        <h2 style="font-size: 70px; font-weight: 400; margin-top: 110px;" class="container">ВОССТАНОВЛЕНИЕ МИРНОЙ ЖИЗНИ НА ОСВОБОЖДЕННЫХ
+        <h2 style="font-size: 70px; font-weight: 400; margin-top: 110px;" class="container textsize">ВОССТАНОВЛЕНИЕ МИРНОЙ ЖИЗНИ
+            НА ОСВОБОЖДЕННЫХ
             ТЕРРИТОРИЯХ</h2>
-        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 85px; margin-top: 85px;">
+        <div class="container gridcol" style="display: grid; grid-template-columns: 1fr 1fr; gap: 85px; margin-top: 85px;">
             <div>
                 <p style="font-size: 96px;">>2105</p>
                 <p style="font-size: 24px; font-weight: 300;">Акций проведено по гуманитарной помощи</p>
@@ -292,11 +357,11 @@
         <img src="/Frame 1.png" alt="">
     </main>
     <footer style="background-color: black;">
-        <div class="container"
+        <div class="container gridcol"
             style="display: grid; grid-template-columns:  1fr 1fr 1fr; align-items: center; color: white; padding-block: 138px;">
-            <h1>МЫ ПОМНИМ</h1>
+            <h1 class="textcenter">МЫ ПОМНИМ</h1>
             <a style="color: white; text-decoration: none; text-align: center;" href="">ИСТОРИЯ</a>
-            <div style="display: flex; justify-content: flex-end;">
+            <div class="justcenter" style="display: flex; justify-content: flex-end;">
                 <img style="width: 70px; height: 70px;" src="/vk.svg" alt="">
                 <img style="width: 70px; height: 70px;" src="/youtube.svg" alt="">
                 <img style="width: 70px; height: 70px;" src="/telegram.svg" alt="">
