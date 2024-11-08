@@ -173,7 +173,7 @@
 <body style="background-image: url('/a9edaf2dd7aed61240d7834b8a33c652.jpg');">
     <header class="header">
         <div class="header__container container">
-            <a style="color: white;" href="/index.html">
+            <a class="header__title" style="color: white;" href="/index.html">
                 <h1 class="header__title">Мы помним</h1>
             </a>
             <nav class="header__nav">
@@ -183,14 +183,16 @@
                     </li>
                     <li class="navbar__item navbar__item_withIcon">
                         <a href="/search.html">
-                            <img src="/card/assets/search.svg" alt="search" />
                             <span>поиск</span>
+                            <img style="transform: translateY(-2px);" src="/card/assets/search.svg" alt="search" />
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="header__search">
-                <img src="/card/assets/search.svg" alt="search" />
+                <a href="/search.html">
+                    <img src="/card/assets/search.svg" alt="search" />
+                </a>
             </div>
             <div class="header__menu">
                 <img src="/card/assets/menu.svg" alt="menu" />
@@ -203,12 +205,12 @@
             <nav class="header__nav mobileMenu__nav">
                 <ul class="navbar__items">
                     <li class="navbar__item">
-                        <a href="#">история</a>
+                        <a href="/history.html">история</a>
                     </li>
                     <li class="navbar__item navbar__item_withIcon">
-                        <a href="#">
-                            <img src="card/assets/search.svg" alt="search" />
+                        <a href="/search.html">
                             <span>поиск</span>
+                            <img style="transform: translateY(-2px);" src="/card/assets/search.svg" alt="search" />
                         </a>
                     </li>
                 </ul>
