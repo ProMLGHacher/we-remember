@@ -51,9 +51,18 @@
 
         .cards__container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 350px));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 40px;
             margin-block: 66px;
+        }
+
+        @media screen and (max-width: 660px) {
+            .cards__container {
+                grid-template-columns: 1fr;
+            }
+            .main__title {
+                font-size: 46px;
+            }
         }
 
         .card {
@@ -125,15 +134,15 @@
             search.addEventListener("input", (e) => {
                 e.preventDefault();
                 if (search.value.trim().length) {
-                    const result = sch.find(item => item.value.toLowerCase().includes(search.value.toLowerCase()));
-                    if (result) {
-                        cards.innerHTML = `<a href="${result.url}" class="card">
-                            <p class="card__name">${result.value.split(' ')[0]}</p>
-                            <p class="card__surname">${result.value.split(' ')[1]} ${result.value.split(' ')[2]}</p>
+                    const result = sch.filter(item => item.value.toLowerCase().includes(search.value.toLowerCase()));
+                    if (result.length > 0) {
+                        cards.innerHTML = [...result, ...result, ...result, ...result].map(item => `<a href="${item.url}" class="card">
+                            <p class="card__name">${item.value.split(' ')[0]}</p>
+                            <p class="card__surname">${item.value.split(' ')[1]} ${item.value.split(' ')[2]}</p>
                             <div class="card__line"></div>
-                            <div class="card__date">${result.date}</div>
-                            <img class="card__photo" src="${result.photo}" alt="фото погибшего">
-                        </a>`;
+                            <div class="card__date">${item.date}</div>
+                            <img class="card__photo" src="${item.photo}" alt="фото погибшего">
+                        </a>`).join('');
                     } else {
                         cards.innerHTML = `<p class="notFound">Ничего не найдено</p>`;
                     }

@@ -52,10 +52,36 @@
             margin-inline: auto;
         }
 
+        .txt {
+            display: flex;
+            gap: 20px;
+        }
+
 
         @media (max-width: 960px) {
+
+            .txt1 {
+                font-size: 60px !important;
+            }
+
+            .txt2 {
+                font-size: 20px !important;
+            }
+
+            .txt3 {
+                font-size: 40px !important;
+            }
+
+            .txt {
+                flex-direction: column;
+            }
+
             .imgmain {
                 width: 100% !important;
+            }
+
+            marquee {
+                font-size: 48px !important;
             }
 
             .grid {
@@ -216,7 +242,7 @@
         <div class="grid container" style="color: #3E3E3E; margin-bottom: 80px;">
             <div style="grid-area: one; margin-bottom: 60px;">
                 <img style="margin-bottom: 30px;" src="/image 23.png" alt="">
-                <div style="display: flex; gap: 20px;">
+                <div class="txt">
                     <p>В восточном секторе Арктики и на полуострове Чукотка проведена арктическая экспедиция.</p>
                     <p>Выполнен комплекс учебно-боевых мероприятий, исследования и эксперименты. Все образцы вооружения
                         подтвердили свои технические характеристики в арктических условиях.</p>
@@ -409,27 +435,27 @@
                 </p>
             </div>
         </div>
-        <h2 style="font-size: 70px; font-weight: 400; margin-top: 110px;" class="container textsize">ВОССТАНОВЛЕНИЕ
+        <h2  style="font-size: 70px; font-weight: 400; margin-top: 110px;" class="container textsize txt3">ВОССТАНОВЛЕНИЕ
             МИРНОЙ ЖИЗНИ
             НА ОСВОБОЖДЕННЫХ
             ТЕРРИТОРИЯХ</h2>
         <div class="container gridcol"
             style="display: grid; grid-template-columns: 1fr 1fr; gap: 85px; margin-top: 85px;">
             <div>
-                <p style="font-size: 96px;">>2105</p>
-                <p style="font-size: 24px; font-weight: 300;">Акций проведено по гуманитарной помощи</p>
+                <p class="txt1" style="font-size: 96px;">>2105</p>
+                <p class="txt2" style="font-size: 24px; font-weight: 300;">Акций проведено по гуманитарной помощи</p>
             </div>
             <div>
-                <p style="font-size: 96px;">27 тыс.га</p>
-                <p style="font-size: 24px; font-weight: 300;">Местности проверено на наличие мин</p>
+                <p class="txt1" style="font-size: 96px;">27 тыс.га</p>
+                <p class="txt2" style="font-size: 24px; font-weight: 300;">Местности проверено на наличие мин</p>
             </div>
             <div>
-                <p style="font-size: 96px;">>115 тыс.т</p>
-                <p style="font-size: 24px; font-weight: 300;">Грузов передано</p>
+                <p class="txt1" style="font-size: 96px;">>115 тыс.т</p>
+                <p class="txt2" style="font-size: 24px; font-weight: 300;">Грузов передано</p>
             </div>
             <div>
-                <p style="font-size: 96px;">>900 тыс.</p>
-                <p style="font-size: 24px; font-weight: 300;">ВОП уничтожено</p>
+                <p class="txt1" style="font-size: 96px;">>900 тыс.</p>
+                <p class="txt2" style="font-size: 24px; font-weight: 300;">ВОП уничтожено</p>
             </div>
         </div>
         <img src="/Frame 1.png" alt="">
