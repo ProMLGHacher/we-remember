@@ -111,10 +111,16 @@
         const sch = [
             {
                 value: 'Белов Андрей Сергеевич',
-                url: '/card/index.html',
-                photo: '/card/assets/mainPhoto.jpg',
+                url: '/card/below',
+                photo: '/card/below/assets/mainPhoto.jpg',
                 date: '24.10.1982 – 22.02.2023'
             },
+            {
+                value: 'Волосков Александр Сергеевич',
+                url: '/card/voloskov',
+                photo: '/card/voloskov/assets/mainPhoto.png',
+                date: '02.05.2001 – 09.02.2023'
+            }
         ]
         window.onload = () => {
             const search = document.getElementById("search");
@@ -148,6 +154,8 @@
                     } else {
                         cards.innerHTML = `<p class="notFound">Ничего не найдено</p>`;
                     }
+                } else {
+                    cards.innerHTML = '';
                 }
             });
         };

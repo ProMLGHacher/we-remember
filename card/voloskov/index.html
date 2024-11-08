@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Волосков Александр Сергеевич</title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <div class="header__container container">
+                <a class="header__title" style="color: white;" href="/index.html">
+                    <h1 class="header__title">Мы помним</h1>
+                </a>
+                <nav class="header__nav">
+                    <ul class="navbar__items">
+                        <li class="navbar__item">
+                            <a href="/history.html">история</a>
+                        </li>
+                        <li class="navbar__item navbar__item_withIcon">
+                            <a href="/search.html">
+                                <span>поиск</span>
+                                <img style="transform: translateY(-2px);" src="/card/assets/search.svg" alt="search" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__search">
+                    <a href="/search.html">
+                        <img src="/card/assets/search.svg" alt="search" />
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <img src="/card/assets/menu.svg" alt="menu" />
+                </div>
+            </div>
+            <div class="mobileMenu">
+                <div class="mobileMenu__close">
+                    <img src="/card/assets/close.svg" alt="close">
+                </div>
+                <nav class="header__nav mobileMenu__nav">
+                    <ul class="navbar__items">
+                        <li class="navbar__item">
+                            <a href="/history.html">история</a>
+                        </li>
+                        <li class="navbar__item navbar__item_withIcon">
+                            <a href="/search.html">
+                                <span>поиск</span>
+                                <img style="transform: translateY(-2px);" src="/card/assets/search.svg" alt="search" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="promo">
+            <div class="promo__container container">
+                <div class="promo__photo">
+                    <img src="./assets/mainPhoto.png" alt="photo" />
+                </div>
+                <div class="promo__info">
+                    <h2 class="promo__title">Волосков Александр Сергеевич</h2>
+                    <div class="promo__devider">
+                        <div></div>
+                        <span style="text-align: end;">02.05.2001 – 09.02.2023</span>
+                    </div>
+                    <div class="promo__subtitle">мемориальная страница</div>
+                    <ul class="promo__items">
+                        <li class="promo__item">
+                            <a href="#archive">фотоархив</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#biography">биография</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#biography">награды</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#memories">воспоминания близких</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#words">слова памяти</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#grave-place">место захоронения</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#relatives-pages">родственные страницы</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#links">ссылки</a>
+                        </li>
+                        <li class="promo__item">
+                            <a href="#qr-code   ">qr-код</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="archive">
+            <div class="section__container container">
+                <h2 class="title">фотоархив</h2>
+                <div class="section__content">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img style="max-height: 600px;" src="./assets/slider/1.jpg" alt="image: 1" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="max-height: 600px;" src="./assets/slider/2.jpg" alt="image: 2" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="max-height: 600px;" src="./assets/slider/3.jpg" alt="image: 3" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="max-height: 600px;" src="./assets/slider/4.jpg" alt="image: 4" />
+                            </div>
+                        </div>
+                        <div class="swiper__desc">
+                            <p>Фотография из семейного архива</p>
+                        </div>
+                        <p class="swiper__navigation">
+                            <span id="currentPage"></span>/<span id="totalPages"></span>
+                        </p>
+                        <div class="swiper-pagination"></div>
+                        <div class="controls">
+                            <button class="controls__button controls__button_prev">
+                                <img src="./assets/arrow.svg" alt="prev" />
+                            </button>
+                            <button class="controls__button controls__button_next">
+                                <img src="./assets/arrow.svg" alt="next" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="biography">
+            <div class="section__container container">
+                <h2 class="title">биография</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Волосков Александр Сергеевич. Родился 2 мая 2001г. в п. Новоодесский, Акбулакского района, 
+                        Оренбургской обл. Учился в школе. Также занимался  в музыкальной школе, учился играть на трубе,
+                        получил диплом об окончании школы. Занимался спортом, играл в хоккей. Есть медали по
+                        соревнованиям. Обычный мальчишка. Подрос, по стечению обстоятельств попал в тюрьму. И оттуда, 8
+                        января ушёл добровольцем на Украину, в ЧВК Вагнер. Воевал за свободу и независимость Луганской
+                        Народной Республики. Погиб 09.02.2023г. при взятии г. Артемовска (Бахмут). Пал смертью храбрых,
+                        проявив мужество и отвагу.  </p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="awards">
+            <div class="section__container container">
+                <h2 class="title">награды</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Имеет награды от Путина и медаль от ЧВК Вагнер <br>
+                        Награжден крестом «За мужество и отвагу» ЧВК «Вагнер» посмертно <br>
+                        Награжден медалью «За отвагу» посмертно
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="memories">
+            <div class="section__container container">
+                <h2 class="title">воспоминания близких</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Вы сможете поделиться своими воспоминаниями о человеке, воспоминаниями близких людей,
+                        сослуживцев или коллег.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="words">
+            <div class="section__container container">
+                <h2 class="title">слова памяти</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Вы сможете оставить памятные слова от родных и близких людей.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="grave-place">
+            <div class="section__container container">
+                <h2 class="title">место захоронения</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Оренбургская область, посёлок Акбулак, Новое кладбище
+                    </p>
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=55.646115%2C51.007482&z=16&pt=55.646115,51.007482,pm2rdl"
+                        width="100%" height="400" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="relatives-pages">
+            <div class="section__container container">
+                <h2 class="title">родственные страницы</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Вы сможете добавить ссылки на связанные (родственные) Мемориальные страницы.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="links">
+            <div class="section__container container">
+                <h2 class="title">ссылки</h2>
+                <div class="section__content">
+                    <p class="section__contentItem">
+                        Вы сможете добавить до 3-х ссылок на другие источники информации о человеке.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="qr-code">
+            <div class="section__container container">
+                <h2 class="title">qr-код страницы</h2>
+                <div class="section__content">
+                    <div id="qrcode"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container container">
+                <a style="color: white;" href="/index.html">
+                    <h2 class="header__title">Мы помним</h2>
+                </a>
+                <nav class="header__nav footer__nav">
+                    <ul class="navbar__items">
+                        <li class="navbar__item">
+                            <a href="/history.html">история</a>
+                        </li>
+                        <li class="navbar__item navbar__item_withIcon">
+                            <a href="/search.html">
+                                <span>поиск</span>
+                                <img style="transform: translateY(-2px);" src="/card/assets/search.svg" alt="search" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="footer__socials">
+                    <li class="footer_socialIcon">
+                        <a href="#">
+                            <img src="/card/assets/phone.svg" alt="phone" />
+                        </a>
+                    </li>
+                    <li class="footer_socialIcon">
+                        <a href="#">
+                            <img src="/card/assets/youtube.svg" alt="youtube" />
+                        </a>
+                    </li>
+                    <li class="footer_socialIcon">
+                        <a href="#">
+                            <img src="/card/assets/telegram.svg" alt="telegram" />
+                        </a>
+                    </li>
+                    <li class="footer_socialIcon">
+                        <a href="#">
+                            <img src="/card/assets/vk.svg" alt="vk" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    <script src="./index.js"></script>
+    <script type="module">
+        import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+        const currentPage = document.querySelector("#currentPage");
+        const totalPages = document.querySelector("#totalPages");
+
+        const swiper = new Swiper(".swiper", {
+            autoHeight: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".controls__button_next",
+                prevEl: ".controls__button_prev",
+            },
+        });
+
+        currentPage.textContent = swiper.activeIndex + 1;
+        totalPages.textContent = swiper.slides.length;
+
+        swiper.on("slideChange", () => (currentPage.textContent = swiper.activeIndex + 1));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: location.href,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+
+</html>
