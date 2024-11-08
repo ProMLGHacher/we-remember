@@ -1,0 +1,57 @@
+@import "./footer.css";
+@import "./header.css";
+@import "./navbar.css";
+@import "./mobileMenu.css";
+@import "./swiper.min.css";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+
+    --sm: 576px;
+    --lg: 1124px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1074px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1124px) {
+    .container {
+        width: 100%;
+        max-width: unset;
+        padding: 0 30px;
+    }
+}
