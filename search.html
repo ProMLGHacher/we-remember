@@ -60,8 +60,10 @@
             .cards__container {
                 grid-template-columns: 1fr;
             }
+        }
+        @media screen and (max-width: 834px) {
             .main__title {
-                font-size: 46px;
+                font-size: 50px;
             }
         }
 
@@ -136,7 +138,7 @@
                 if (search.value.trim().length) {
                     const result = sch.filter(item => item.value.toLowerCase().includes(search.value.toLowerCase()));
                     if (result.length > 0) {
-                        cards.innerHTML = [...result, ...result, ...result, ...result].map(item => `<a href="${item.url}" class="card">
+                        cards.innerHTML = result.map(item => `<a href="${item.url}" class="card">
                             <p class="card__name">${item.value.split(' ')[0]}</p>
                             <p class="card__surname">${item.value.split(' ')[1]} ${item.value.split(' ')[2]}</p>
                             <div class="card__line"></div>
