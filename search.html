@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мы помним</title>
     <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
     <link rel="stylesheet" href="/css/fromcard.css">
+    <title>Поиск</title>
+
     <style>
         * {
             margin: 0;
@@ -17,118 +17,130 @@
             font-family: "Bebas Neue", sans-serif;
         }
 
-        .img {
-            width: 100%;
-        }
-
         .main {
-            padding-bottom: 200px;
-        }
-
-        .main__content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 58px;
-            margin-top: 34px;
+            min-height: calc(100dvh - 120px - 300px);
         }
 
         .main__title {
+            font-size: 60px;
+            font-weight: 700;
             text-transform: uppercase;
-            font-size: 64px;
         }
 
-        .main__subtitle {
-            text-transform: uppercase;
-            font-weight: 400;
-            font-size: 24px;
-            margin-top: 15px;
-        }
-
-        .main__content_title {
-            text-transform: uppercase;
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .main__content_text {
-            font-size: 20px;
+        .search__container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 11px 20px;
+            border: 1px solid black;
+            border-radius: 6px;
             margin-top: 44px;
-            font-family: "Roboto Light", sans-serif;
+        }
+
+        .search__input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 20px;
             font-weight: 400;
+            color: black;
+            font-family: "Roboto", sans-serif;
         }
 
-        @media screen and (max-width: 1124px) {
-            .main__content {
-                grid-template-columns: 1fr;
-                margin-top: 39px;
-            }
+        
 
-            .main__title {
-                font-size: 43px;
-                font-weight: 700;
-                text-align: center;
-            }
-
-            .main__subtitle {
-                font-size: 24px;
-                text-align: center;
-                margin-top: 50px;
-            }
-
-
-            .main__content_title {
-                font-size: 32px;
-                text-align: center;
-                margin-top: 82px;
-            }
-
-            .main__content_text {
-                font-size: 20px;
-                text-align: center;
-                margin-top: 48px;
-            }
-
-            .container {
-                width: 660px;
-            }
+        .cards__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 350px));
+            gap: 40px;
+            margin-block: 66px;
         }
 
-        @media screen and (max-width: 680px) {
-            .main__content {
-                grid-template-columns: 1fr;
-                margin-top: 31px;
-            }
-
-            .main__title {
-                font-size: 26px;
-                font-weight: 700;
-                text-align: center;
-            }
-
-            .main__subtitle {
-                font-size: 18px;
-                text-align: center;
-                margin-top: 26px;
-            }
-
-
-            .main__content_title {
-                font-size: 26px;
-                text-align: center;
-                margin-top: 45px;
-            }
-
-            .main__content_text {
-                font-size: 20px;
-                text-align: center;
-                margin-top: 42px;
-            }
-
-            .container {
-                width: 96%;
-            }
+        .card {
+            border: 1px solid black;
+            border-radius: 6px;
+            padding: 35px 25px;
+            color: black;
         }
+
+        .card__name {
+            font-size: 28px;
+        }
+
+        .card__surname {
+            font-size: 20px;
+            margin-top: 18px;
+        }
+
+        .card__line {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-top: 14px;
+            margin-bottom: 16px;
+        }
+
+        .card__date {
+            font-size: 18px;
+        }
+
+        .card__photo {
+            width: 100%;
+            object-fit: cover;
+            margin-top: 31px;
+            border-radius: 6px;
+        }
+
+        @media screen and (max-width: 1124px) {}
+
+        @media screen and (max-width: 680px) {}
     </style>
+
+    <script>
+        const sch = [
+            {
+                value: 'Белов Андрей Сергеевич',
+                url: '/card/index.html',
+                photo: '/card/assets/mainPhoto.jpg',
+                date: '24.10.1982 – 22.02.2023'
+            },
+        ]
+        window.onload = () => {
+            const search = document.getElementById("search");
+            const cards = document.getElementById("cards");
+            if (search.value.trim().length > 0) {
+                const result = sch.find(item => item.value.toLowerCase().includes(search.value.toLowerCase()));
+                    if (result) {
+                        cards.innerHTML = `<a href="${result.url}" class="card">
+                            <p class="card__name">${result.value.split(' ')[0]}</p>
+                            <p class="card__surname">${result.value.split(' ')[1]} ${result.value.split(' ')[2]}</p>
+                            <div class="card__line"></div>
+                            <div class="card__date">${result.date}</div>
+                            <img class="card__photo" src="${result.photo}" alt="фото погибшего">
+                        </a>`;
+                    } else {
+                        cards.innerHTML = `<p class="notFound">Ничего не найдено</p>`;
+                    }
+            }
+            search.addEventListener("input", (e) => {
+                e.preventDefault();
+                if (search.value.trim().length) {
+                    const result = sch.find(item => item.value.toLowerCase().includes(search.value.toLowerCase()));
+                    if (result) {
+                        cards.innerHTML = `<a href="${result.url}" class="card">
+                            <p class="card__name">${result.value.split(' ')[0]}</p>
+                            <p class="card__surname">${result.value.split(' ')[1]} ${result.value.split(' ')[2]}</p>
+                            <div class="card__line"></div>
+                            <div class="card__date">${result.date}</div>
+                            <img class="card__photo" src="${result.photo}" alt="фото погибшего">
+                        </a>`;
+                    } else {
+                        cards.innerHTML = `<p class="notFound">Ничего не найдено</p>`;
+                    }
+                }
+            });
+        };
+    </script>
 </head>
 
 <body>
@@ -180,18 +192,15 @@
     </header>
 
     <main class="main container">
-        <h2 class="main__title">память о прошлом –  забота о будущем</h2>
-        <h4 class="main__subtitle">мы создаем новые источники исторических знаний для всех и для каждого</h4>
-        <div class="main__content">
-            <img class="img" src="/kat.png" alt="kat">
-            <div class="main__content_text-wrapper">
-                <h5 class="main__content_title">Мы помним героев</h5>
-                <p class="main__content_text">
-                    Мы чтим память о героях сво и их невероятном мужестве. Здесь вы найдете последние новости о проектах
-                    помощи и пожертвования, а также биографии тех, кто пожертвовал своей жизнью в борьбе за свободу и
-                    безопасность других. Присоединяйтесь к нам, чтобы вместе почтить их память и увековечить их подвиги.
-                </p>
-            </div>
+        <h1 class="main__title">
+            поиск погибших людей
+        </h1>
+        <div class="search__container container">
+            <img style="filter: invert(1);" src="/card/assets/search.svg" alt="search">
+            <input type="text" id="search" class="search__input" placeholder="Введите имя">
+        </div>
+        <div class="cards__container" id="cards">
+
         </div>
     </main>
 
@@ -237,7 +246,6 @@
             </ul>
         </div>
     </footer>
-
     <script src="/js/index.js"></script>
 </body>
 
